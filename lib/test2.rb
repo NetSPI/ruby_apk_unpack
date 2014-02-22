@@ -23,9 +23,12 @@ class Test2
  	 my_hash.each do |k,v|
   		puts "Please specify the absolute location of the #{k}"
   		instance_variable_set("@#{k}".underscore, gets.chomp)
-		answer = self.exists(v,k) ? "true" : "false"
-		puts answer
+		unless self.exists(v,k)
+			redo
+		end
  	 end
+ 	 rescue ::Interrupt
+ 	 	puts "\nGoodbye"
   end
     
   def self.exists(data_type, entity)  
