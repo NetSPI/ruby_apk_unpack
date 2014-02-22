@@ -1,5 +1,7 @@
 require "test2/version"
 
-module Test2
-  # Your code goes here...
+class Test2
+  def self.run
+  puts "Hello World"
+  end
 end

@@ -6,18 +6,21 @@ require 'test2/version'
 Gem::Specification.new do |spec|
   spec.name          = "test2"
   spec.version       = Test2::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Abdullah"]
+  spec.email         = ["abdullah.munawar@nvisiumsecurity.com"]
+  spec.summary       = %q{my first ruby gem.}
+  spec.description   = %q{my first ruby gem.}
   spec.homepage      = ""
   spec.license       = "MIT"
-
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
-
+  
+  spec.files        = %w(LICENSE.txt README.md)
+  spec.files       += Dir.glob('bin/**/*')
+  spec.files	   += Dir.glob('lib/**/*')
+  spec.files       += Dir.glob('spec/**/*')
+  spec.test_files   = Dir.glob('spec/**/*')
+  spec.executables  = %w(test2)
+  spec.require_path = '.'
+  
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end
