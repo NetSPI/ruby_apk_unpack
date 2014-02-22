@@ -27,6 +27,7 @@ class Test2
 			redo
 		end
  	 end
+ 	 execute
  	 rescue ::Interrupt
  	 	puts "\nGoodbye"
   end
@@ -39,6 +40,10 @@ class Test2
   	when "file"
   		File.exists?(val)
   	end 
+  end
+  
+  def self.execute
+    my_hash.each {|iv, data| puts instance_variable_get("@#{iv}".underscore) }
   end
   
     
