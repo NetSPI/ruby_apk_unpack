@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+# Test2
+
+TODO: Write a gem description
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'test2'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install test2
+
+## Usage
+
+TODO: Write usage instructions here
+
+## Contributing
+
+1. Fork it ( http://github.com/<my-github-username>/test2/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+=======
+ruby_apk_unpack
+===============
+
+Ruby Gem to Unpack APK(s)
+>>>>>>> 9d367b689227d05049aaa53b7367024f5001bc86
