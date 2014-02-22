@@ -47,7 +47,7 @@ class Test2
   end
   
   def self.run_apktool
-  	system("java -jar", @apktool, "d", @apk, "#{@output_directory}/apktool_output")
+   	system "java", "-jar", @apktool, "d", @apk, "#{@output_directory}/apktool_output" 
   end
   
   def self.run_dex2jar
