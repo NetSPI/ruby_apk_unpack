@@ -43,20 +43,17 @@ class Test2
   end
   
   def self.execute
-    my_hash.each {|iv, data| puts instance_variable_get("@#{iv}".underscore) }
+	run_apktool
   end
   
-    
-=begin def self.run
-  puts "Please specify the path of the APK file: "
-  apk_location = gets.chomp
-  puts "Please specify the path of the Dex2Jar executable: "
-  dex2jar_location = gets.chomp
-  puts "Please specify the path of the APK Tool executable: "
-  apktool_location = gets.chomp
-  puts "Please specify the output file location: "
-  outputfile_location = gets.chomp
+  def self.run_apktool
+  	system("java -jar", @apktool, "d", @apk, "#{@output_directory}/apktool_output")
   end
-=end
+  
+  def self.run_dex2jar
+  
+  end
+      
+
 end
 
