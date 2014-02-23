@@ -1,16 +1,5 @@
-class String
-  def underscore
-    self.gsub(/::/, '/').
-    gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
-    gsub(/([a-z\d])([A-Z])/,'\1_\2').
-    tr("-", "_").
-    tr(" ", "_").
-    tr(".", "_").
-    downcase
-  end
-end
 
-class Test2
+class Decompiler
   def self.my_hash
    {
   "apk" => "file",
@@ -48,17 +37,23 @@ class Test2
 	run_dex2jar
   end
   
+  def self.convert_apkname_to_underscore
+  	file_name = File.basename(@apk).underscore
+  end
+  
+  def self.convert_apk_to_jar
+  	file_name = File.basename(@apk).sub(/.apk/, ".jar")
+  end
+  
   def self.run_apktool
-   	system "java", "-jar", @apktool, "d", "-f", @apk, "#{@output_directory}/apktool_output" 
+   	system "java", "-jar", @apktool, "d", "-f", @apk, "#{@output_directory}/apktool_output_#{self.convert_apk_to_jar}" 
   end
   
   def self.run_dex2jar
      	path = "#{@output_directory}/dex2jar_output"
-     	Dir.mkdir path if not Dir.exist? path
-     	file_name = File.basename(@apk).sub(/.apk/, ".jar")
-     	system @d2j_dex2jar__sh_or__bat, @apk, "-f", "-o", "#{path}/#{file_name}" 
+     	Dir.mkdir path if not Dir.exist? path	
+     	system @d2j_dex2jar__sh_or__bat, @apk, "-f", "-o", "#{path}/#{convert_apk_to_jar}" 
   end
-      
 
 end
 

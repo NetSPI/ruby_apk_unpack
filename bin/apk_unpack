@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'lib/apk_unpack'
+
+
+ApkUnpack.run

@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'lib/test2'
-
-
-Test2.run
