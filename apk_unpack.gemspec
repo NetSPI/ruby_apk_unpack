@@ -9,12 +9,12 @@ Gem::Specification.new do |spec|
   spec.email         = ["abdullah.munawar@nvisiumsecurity.com"]
   spec.summary       = %q{my first ruby gem.}
   spec.description   = %q{my first ruby gem.}
-  spec.homepage      = ""
+  spec.homepage      = "http://nvisium.github.io/ruby_apk_unpack/"
   spec.license       = "MIT"
   
   spec.files        = %w(LICENSE.txt README.md)
   spec.files       += Dir.glob('bin/**/*')
-  spec.files	   += Dir.glob('lib/**/*')
+  spec.files	     += Dir.glob('lib/**/*')
   spec.files       += Dir.glob('spec/**/*')
   spec.test_files   = Dir.glob('spec/**/*')
   spec.executables  = %w(apk_unpack)
