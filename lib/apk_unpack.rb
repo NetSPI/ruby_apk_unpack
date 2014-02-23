@@ -18,7 +18,7 @@ class ApkUnpack
   			end
 		end.parse!
 		if !options.empty?
-			
+			 Parsing.parse(options[:config_file])
 		else
   			Decompiler.run
 		end

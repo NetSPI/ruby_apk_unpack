@@ -6,6 +6,7 @@ class String
     tr("-", "_").
     tr(" ", "_").
     tr(".", "_").
+    tr("__", "_")
     downcase
   end
 end

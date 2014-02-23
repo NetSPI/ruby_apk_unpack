@@ -32,6 +32,19 @@ class Decompiler
   	end 
   end
   
+  def self.set_static_vars(opts={})
+    raise "NoOptionsProvidedFromConfigFile" if opts.empty?
+    @apktool = opts[:apktool]
+    @output_directory = opts[:output_directory]
+    @d2j_dex2jar_sh_or_bat = opts[:d2j]
+  end  
+  
+  def self.set_apk_var(apk_loc = "")
+     raise "NotAValidApkLocationValue" if !(apk_loc.kind_of?(String))
+     raise "NoAPKProvidedFromConfigFile" if apk_loc.empty?
+     @apk = apk_loc
+   end
+  
   def self.execute
 	run_apktool
 	run_dex2jar
@@ -52,7 +65,7 @@ class Decompiler
   def self.run_dex2jar
      	path = "#{@output_directory}/dex2jar_output"
      	Dir.mkdir path if not Dir.exist? path	
-     	system @d2j_dex2jar__sh_or__bat, @apk, "-f", "-o", "#{path}/#{convert_apk_to_jar}" 
+     	system @d2j_dex2jar_sh_or_bat, @apk, "-f", "-o", "#{path}/#{convert_apk_to_jar}" 
   end
 
 end
