@@ -5,9 +5,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "apk_unpack"
   spec.version       = "0.0.1"
-  spec.authors       = ["Abdullah"]
+  spec.authors       = ["Abdullah Munawar", "Marcus Richardson", "Riandi Wiguna", "Ken Johnson"]
   spec.email         = ["abdullah.munawar@nvisiumsecurity.com"]
-  spec.summary       = %q{my first ruby gem.}
+  spec.summary       = %q{A ruby gem intended to simplify decompiling APK files}
   spec.description   = %q{my first ruby gem.}
   spec.homepage      = "http://nvisium.github.io/ruby_apk_unpack/"
   spec.license       = "MIT"
