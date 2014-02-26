@@ -4,7 +4,7 @@ require 'decompiler/decompiler'
 require 'optparse'
 
 class ApkUnpack
-	def self.run
+	def self.run 
 		options = {}
 		OptionParser.new do |opts|
   			opts.banner = "Usage: example.rb [options]"
@@ -14,7 +14,8 @@ class ApkUnpack
   			end
 
 			opts.on("-h", "--help", "Displays help information") do
-    			puts opts
+    			puts opts 
+    			exit
   			end
 		end.parse!
 		if !options.empty?

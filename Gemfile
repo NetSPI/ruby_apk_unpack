@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in test2.gemspec
+# Specify your gem's dependencies in apk_unpack.gemspec
 gemspec
