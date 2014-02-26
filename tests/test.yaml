@@ -1,9 +1,5 @@
 apk: 
-    - /Users/amunawar/Documents/android_files/Dating_Apps/com.okcupid.okcupid-1.apk
-    - /Users/amunawar/Documents/android_files/Dating_Apps/com.tinder-1.apk
-    - /Users/amunawar/Documents/android_files/Dating_Apps/com.pof.android-1.apk
-    - /Users/amunawar/Documents/android_files/Dating_Apps/com.grindrapp.android-1.apk
-    - /Users/amunawar/Documents/android_files/Dating_Apps/com.android.vending-1.apk
-apktool: /Users/amunawar/Documents/android_files/apktool1.5.2/apktool.jar
-output_directory: /Users/amunawar/Documents/android_files/Dating_App
-d2j: /Users/amunawar/Documents/android_files/dex2jar-0.0.9.15/d2j-dex2jar.sh
+   - apk_placeholder
+apktool: apk_tool_placeholder
+output_directory: output_directory_placeholder
+d2j: d2j_placeholder
