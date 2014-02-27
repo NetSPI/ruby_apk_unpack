@@ -2,11 +2,24 @@ require 'yaml'
 
 class Parsing
   
-  def self.parse(file_location=nil)
+  def self.parse(file_location=nil, test=false)
     raise "NoFileProvidedForParsing" if !(file_location)
-    yaml_c = YAML.load_file(file_location)
+    yaml_c = test ? modify_yaml_attrs(file_location) : parse_config_file(file_location) 
     opts = generate_options_from_yaml(yaml_c)   
     variable_set(opts)
+  end
+  
+  def self.parse_config_file(file_location)
+    yaml_c = YAML.load_file(file_location)
+  end
+  
+  def self.modify_yaml_attrs(file_location)
+   yaml_c = {
+   "apk" => ENV["APK"],
+   "apktool" => ENV["APKTOOL"],
+   "output_directory" => ENV["OUTPUT_DIR"],
+   "d2j" => ENV["DEX2JAR"]
+    }
   end
   
   def self.generate_options_from_yaml(yaml_c) 
