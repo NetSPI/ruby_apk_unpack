@@ -1,0 +1,6 @@
+apk: 
+   - /Users/somebody/Desktop/com.example.apk
+   - /Users/somebody/Desktop/com.another.example.apk
+apktool: /Users/somebody/tmp/apktool1.5.2/apktool.jar
+output_directory: /Users/somebody/Desktop/apk_stuff
+d2j: /Users/somebody/tmp/dex2jar-0.0.9.15/d2j-dex2jar.sh
