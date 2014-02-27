@@ -1,7 +1,7 @@
 require 'test/unit'
-require 'lib/utilities/parsing'
-require 'lib/utilities/string'
-require 'lib/decompiler/decompiler'
+require './lib/utilities/parsing'
+require './lib/utilities/string'
+require './lib/decompiler/decompiler'
 
 class ParseYamlTest < Test::Unit::TestCase
   
