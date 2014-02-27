@@ -39,6 +39,8 @@ class Decompiler
     @d2j_dex2jar_sh_or_bat = opts[:d2j]
   end  
   
+  # This method defines the instance variable @apk as the location            
+  # of the APK file that the user has provided.
   def self.set_apk_var(apk_loc = "")
      raise "NotAValidApkLocationValue" if !(apk_loc.kind_of?(String))
      raise "NoAPKProvidedFromConfigFile" if apk_loc.empty?
@@ -51,7 +53,7 @@ class Decompiler
   end
   
   def self.convert_apkname_to_underscore
-  	file_name = File.basename(@apk).underscore
+  	file_name = File.basename(@apk).underscore.tr(".", "_")
   end
   
   def self.convert_apk_to_jar
@@ -59,7 +61,7 @@ class Decompiler
   end
   
   def self.run_apktool
-   	system "java", "-jar", @apktool, "d", "-f", @apk, "#{@output_directory}/apktool_output_#{self.convert_apk_to_jar}" 
+   	system "java", "-jar", @apktool, "d", "-f", @apk, "#{@output_directory}/apktool_output/#{self.convert_apkname_to_underscore}" 
   end
   
   def self.run_dex2jar

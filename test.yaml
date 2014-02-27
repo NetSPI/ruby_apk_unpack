@@ -1,0 +1,6 @@
+apk: 
+   - /Users/cktricky/Desktop/com.HBO.apk
+   - /Users/cktricky/Desktop/2.com.HBO.apk
+apktool: /Users/cktricky/tmp/apktool1.5.2/apktool.jar
+output_directory: /Users/cktricky/Desktop/stf
+d2j: /Users/cktricky/tmp/dex2jar-0.0.9.15/d2j-dex2jar.sh

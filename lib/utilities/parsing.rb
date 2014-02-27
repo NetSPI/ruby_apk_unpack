@@ -4,7 +4,7 @@ class Parsing
   
   def self.parse(file_location=nil, test=false)
     raise "NoFileProvidedForParsing" if !(file_location)
-    yaml_c = test ? modify_yaml_attrs(file_location) : parse_config_file(file_location) 
+    yaml_c = test ? modify_yaml_attrs : parse_config_file(file_location) 
     opts = generate_options_from_yaml(yaml_c)   
     variable_set(opts)
   end
@@ -13,7 +13,7 @@ class Parsing
     yaml_c = YAML.load_file(file_location)
   end
   
-  def self.modify_yaml_attrs(file_location)
+  def self.modify_yaml_attrs
    yaml_c = {
    "apk" => ENV["APK"],
    "apktool" => ENV["APKTOOL"],
