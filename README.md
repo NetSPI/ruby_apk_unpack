@@ -33,4 +33,4 @@ We hope you have found this post to be helpful in performing Android assessments
 
 Special thanks to [Marcus](https://twitter.com/90skicks), [Riandi](https://twitter.com/rwiguna), and [Ken](https://twitter.com/cktricky) for co-authoring the gem.
 
-Abdullah Munawar is an application security consultant at nVisium who specializes in mobile application testing and ripping apart new things. He previously worked on the security teams at financial and aviation organizations, with over 7 years of experience. Abdullah attempts humor on a daily basis and succeeds most of the time, every time. You can follow Abdullah on twitter @amanofwar
+Abdullah Munawar is an application security consultant at nVisium who specializes in mobile application testing and ripping apart new things. He previously worked on the security teams at financial and aviation organizations, with over 7 years of experience. Abdullah attempts humor on a daily basis and succeeds most of the time, every time. You can follow Abdullah on twitter [@amanofwar](https://twitter.com/amanofwar)
