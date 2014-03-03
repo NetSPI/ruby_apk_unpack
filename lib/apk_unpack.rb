@@ -3,7 +3,10 @@ require 'utilities/parsing'
 require 'decompiler/decompiler'
 require 'optparse'
 
+#This class is responsible for CLI output and options
 class ApkUnpack
+	#This method defines the CLI options of the gem and takes in the
+	#YAML configuration file
 	def self.run 
 		options = {}
 		OptionParser.new do |opts|

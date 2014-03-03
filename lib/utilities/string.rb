@@ -1,3 +1,5 @@
+#This class normalizes the file names and paths being taken in
+#by the YAML file
 class String
   def underscore
     self.gsub(/::/, '/').
