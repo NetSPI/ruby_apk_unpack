@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "apk_unpack"
-  spec.version       = "0.0.2"
+  spec.version       = "0.0.3"
   spec.authors       = ["Abdullah Munawar", "Marcus Richardson", "Riandi Wiguna", "Ken Johnson"]
   spec.email         = ["abdullah.munawar@nvisium.com"]
   spec.summary       = %q{
