@@ -1,8 +1,8 @@
-#This class uses apktool and dex2jar to perform the de-compilation
-#of APKs and outputs the results into their respective directories  
+# This class uses apktool and dex2jar to perform the de-compilation
+# of APKs and outputs the results into their respective directories  
 class Decompiler
   
-  #This method creates a hash of the 4 inputs for the tool
+  # This method creates a hash of the 4 inputs for the tool
   def self.my_hash
    {
   "apk" => "file",
@@ -12,8 +12,8 @@ class Decompiler
   }
   end
   
-  #This method creates instance variable @k and fills up the array
-  #my_hash with the 4 values its expecting
+  # This method creates instance variable @k and fills up the array
+  # my_hash with the 4 values its expecting
   def self.run
  	 my_hash.each do |k,v|
   		puts "Please specify the absolute location of the #{k}"
@@ -27,8 +27,8 @@ class Decompiler
  	 	puts "\nGoodbye"
   end
   
-  #This method validates that the files and directories being
-  #referenced exist   
+  # This method validates that the files and directories being
+  # referenced exist   
   def self.exists(data_type, entity)  
   	val = instance_variable_get ("@#{entity}".underscore)
   	case data_type
@@ -39,9 +39,9 @@ class Decompiler
   	end 
   end
   
-  #This method has the tool revert to having the user manually
-  #enter the 4 parameters needed to runt the tool in the case
-  #the YAML config file does not exist
+  # This method has the tool revert to having the user manually
+  # enter the 4 parameters needed to run the tool in the case
+  # the YAML config file does not exist
   def self.set_static_vars(opts={})
     raise "NoOptionsProvidedFromConfigFile" if opts.empty?
     @apktool = opts[:apktool]
@@ -57,30 +57,30 @@ class Decompiler
      @apk = apk_loc
    end
   
-  #This method executes the  run_apktool and run_dex2jar methods
+  # This method executes the run_apktool and run_dex2jar methods
   def self.execute
 	run_apktool
 	run_dex2jar
   end
   
-  #This method converts periods "." within filenames to underscore
+  # This method converts periods "." within filenames to underscore
   def self.convert_apkname_to_underscore
   	file_name = File.basename(@apk).underscore.tr(".", "_")
   end
   
-  #This method takes the file name of the .apk and converts it to
-  #a .jar
+  # This method takes the file name of the .apk and converts it to
+  # a .jar
   def self.convert_apk_to_jar
   	file_name = File.basename(@apk).sub(/.apk/, ".jar")
   end
   
-  #This method runs apktool and outputs the results into its 
-  #own directory
+  # This method runs apktool and outputs the results into its 
+  # own directory
   def self.run_apktool
    	system "java", "-jar", @apktool, "d", "-f", @apk, "#{@output_directory}/apktool_output/#{self.convert_apkname_to_underscore}" 
   end
   
-  #This method executes dex2jar and outputs the file under its own dex2jar directory
+  # This method executes dex2jar and outputs the file under its own dex2jar directory
   def self.run_dex2jar
      	path = "#{@output_directory}/dex2jar_output"
      	Dir.mkdir path if not Dir.exist? path	
