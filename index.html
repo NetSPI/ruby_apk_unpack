@@ -39,14 +39,14 @@
             <div class="inner">
               <h3 class="masthead-brand">Ruby ApkUnPack</h3>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#feature">Features</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a id="home" href="#">Home</a></li>
+                <li><a id="instruc" href="#feature">Instructions</a></li>
+                <li><a id="contact" href="#">Contact</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="inner cover">
+          <div id="home_div" class="inner cover">
             <h1 class="cover-heading">Decompiling APK Files, Simplified</h1><br/>
             <p class="lead">
             	Ruby ApkUnpack is a ruby gem intended to simplify decompiling APK files. The primary author, Abdullah Munawar, wanted this process automated and so apk_unpack was built! 
@@ -66,7 +66,7 @@
     </div>
     <!-- End Site Wrapper-->
 	<!-- Begin Site Wrapper-->
-    <div class="site-wrapper">
+    <div id="instructions" class="site-wrapper">
 	  <!-- Begin Inner-Site Wrapper-->
       <div class="site-wrapper-inner">
 
@@ -91,6 +91,32 @@
 	  <!-- End Inner-Site Wrapper-->
     </div>
     <!-- End Site Wrapper-->
+	<!-- Begin Site Wrapper-->
+    <div id="contact_div" class="site-wrapper">
+	  <!-- Begin Inner-Site Wrapper-->
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Contact Information</h1><br/>
+            <p class="lead">
+            Blah
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Brought to you by <a href="https://www.nvisium.com">Team nVisium</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+	  <!-- End Inner-Site Wrapper-->
+    </div>
+    <!-- End Site Wrapper-->
  	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -98,4 +124,29 @@
     <script src="/ruby_apk_unpack/assets/js/bootstrap.min.js"></script>
     <script src="/ruby_apk_unpack/assets/js/docs.min.js"></script>
   </body>
+<script>
+function scrollToElement(selector, callback){
+    var animation = {scrollTop: $(selector).offset().top};
+    $('html,body').animate(animation, 'slow', 'swing', function() {
+        if (typeof callback == 'function') {
+            callback();
+        }
+        callback = null;
+    });
+}
+
+
+$("#instruc").click(function() {
+ 	scrollToElement("#instructions");
+});
+$("#contact").click(function() {
+	scrollToElement("#contact_div");
+});
+$("#home").click(function() {
+ 	$("html, body").animate({ scrollTop: 0 }, "slow");
+	  return false;
+});
+</script>
 </html>
+
+
