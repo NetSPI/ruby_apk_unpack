@@ -4,16 +4,21 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
 /*
  * Globals
  */
 
+$white: #fff; 
+
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+a {
+  color: $white;
+  &:hover {
+    color: lighten($white,30%);
+  }
 }
 
 /* Custom default button */

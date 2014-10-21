@@ -72,15 +72,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * Globals
  */
 /* Links */
-/* line 15, ../sass/screen.scss */
-a,
-a:focus,
+/* line 17, ../sass/screen.scss */
+a {
+  color: white;
+}
+/* line 19, ../sass/screen.scss */
 a:hover {
-  color: #fff;
+  color: white;
 }
 
 /* Custom default button */
-/* line 22, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -94,7 +96,7 @@ a:hover {
 /*
  * Base structure
  */
-/* line 35, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 html,
 body {
   height: 100%;
@@ -102,7 +104,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 body {
   color: #fff;
   text-align: center;
@@ -111,7 +113,7 @@ body {
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
-/* line 48, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .site-wrapper {
   display: table;
   width: 100%;
@@ -120,20 +122,20 @@ body {
   min-height: 100%;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .cover-container {
   margin-right: auto;
   margin-left: auto;
 }
 
 /* Padding for spacing */
-/* line 64, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .inner {
   padding: 30px;
 }
@@ -141,23 +143,23 @@ body {
 /*
  * Header
  */
-/* line 72, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .masthead-nav > li {
   display: inline-block;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .masthead-nav > li + li {
   margin-left: 20px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
@@ -169,14 +171,14 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 98, ../sass/screen.scss */
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
@@ -185,12 +187,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  /* line 105, ../sass/screen.scss */
+  /* line 110, ../sass/screen.scss */
   .masthead-brand {
     float: left;
   }
 
-  /* line 108, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   .masthead-nav {
     float: right;
   }
@@ -198,12 +200,12 @@ body {
 /*
  * Cover
  */
-/* line 118, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .cover {
   padding: 0 20px;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
@@ -212,7 +214,7 @@ body {
 /*
  * Footer
  */
-/* line 131, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .mastfoot {
   color: #999;
   /* IE8 proofing */
@@ -224,26 +226,26 @@ body {
  */
 @media (min-width: 768px) {
   /* Pull out the header and footer */
-  /* line 143, ../sass/screen.scss */
+  /* line 148, ../sass/screen.scss */
   .masthead {
     position: fixed;
     top: 0;
   }
 
-  /* line 147, ../sass/screen.scss */
+  /* line 152, ../sass/screen.scss */
   .mastfoot {
     position: fixed;
     bottom: 0;
   }
 
   /* Start the vertical centering */
-  /* line 152, ../sass/screen.scss */
+  /* line 157, ../sass/screen.scss */
   .site-wrapper-inner {
     vertical-align: middle;
   }
 
   /* Handle the widths */
-  /* line 158, ../sass/screen.scss */
+  /* line 163, ../sass/screen.scss */
   .masthead,
   .mastfoot,
   .cover-container {
@@ -252,7 +254,7 @@ body {
   }
 }
 @media (min-width: 992px) {
-  /* line 166, ../sass/screen.scss */
+  /* line 171, ../sass/screen.scss */
   .masthead,
   .mastfoot,
   .cover-container {
